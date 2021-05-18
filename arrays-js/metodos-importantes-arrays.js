@@ -13,7 +13,7 @@ console.log(jogadores)
 jogadores.shift()
 console.log(jogadores)
 
-//insereno início
+//insere no início
 jogadores.unshift('Jailson')
 console.log(jogadores)
 
