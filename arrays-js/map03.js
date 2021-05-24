@@ -15,7 +15,7 @@ const carrinho = [
 ]
 
 const converterParaObjeto = json => JSON.parse(json) //converteu array json para um array de objetos
-const obterPreco = produto => produto.preco //obter somente o preçço dos objetos
+const obterPreco = produto => produto.preco //obter somente o preço dos objetos
 
 const resultado = carrinho.map2(converterParaObjeto).map2(obterPreco) //criou outro array igual com o map, depois precorreu e criou outro somente com os preços
 console.log(resultado)

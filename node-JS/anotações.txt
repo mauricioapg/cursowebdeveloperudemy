@@ -1,0 +1,13 @@
+- Node é o que permite o JavaScript rodar a mesma linguagem tanto no backend como no frontend (diferentemente do Java ou C# que rodam no servidor e de lá é gerado código HTML padrão).
+
+- O node é um sistema de módulos. Cada arquivo é um módulo. Os arquivos são exportados para a aplicação.
+
+- .gitignore: Este arquivo representa todos os módulos que você quer que seja ignorado ao enviar os códigos para o GitHub
+
+- lodash é um exemplo de biblioteca de terceiros
+
+- Para instalar biblioteca de terceiros de forma GLOBAL, usa-se os comandos do node no terminal
+
+- Para instalar biblioteca de terceiros EM UM MÓDULO ESPECÍFICO, usa-se o comando require dentro do módulo
+
+- nodemon é uma bblioteca de terceiros que permite alterar e dar um refresh em tempo de execução em um arquivo executando no terminal node
