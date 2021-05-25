@@ -1,0 +1,1 @@
+module.exports.saudacao = 'Seja bem vindo a pasta C!'
