@@ -13,3 +13,5 @@
 - nodemon é uma bblioteca de terceiros que permite alterar e dar um refresh em tempo de execução em um arquivo executando no terminal node
 
 - npm -init (cria o arquivo package.json) (npm -init -y cria o arquivo sem precisar responder as perguntas)
+
+- Padrão middleware: grande parte dos frameworks se baseiam neste padrão.

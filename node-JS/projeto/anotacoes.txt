@@ -1,0 +1,5 @@
+Instalar package.json:
+npm init -y
+
+Instalar framework express (na versão específica)
+npm i --save express@4.16.2 -E
