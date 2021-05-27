@@ -2,14 +2,24 @@ const porta = 3003
 
 const express = require('express')
 const app = express()
+const database = require('./database')
+
+app.get('/produtos/:id', (req, res, next) => {
+    res.send(database.getProduto(req.params.id))
+})
 
 app.get('/produtos', (req, res, next) => {
-    res.send({nome: 'Notebook', fabricante: 'Dell', modelo: 'Latitude 3450', preco: 3086.90}) //será convertido automaticamente para JSON
-    next()
+    res.send(database.getProdutos())
 })
 
 app.post('/produtos', (req, res, next) => {
-    res.send({nome: 'Notebook', fabricante: 'Dell', modelo: 'Inspiron 1510', preco: 2680.90}) //será convertido automaticamente para JSON
+    const produto = database.salvarProduto({
+        nome: req.body.name,
+        fabricante: req.body.fabricante,
+        modelo: req.body.modelo,
+        preco: req.body.preco
+    })
+    res.send(produto) //JSON
 })
 
 app.listen(porta, () => {
