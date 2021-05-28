@@ -3,3 +3,6 @@ npm init -y
 
 Instalar framework express (na versão específica)
 npm i --save express@4.16.2 -E
+
+Body Parser - dependência para tratar os dados body para serem enviados pelo servidor
+npm i --save body-parser
