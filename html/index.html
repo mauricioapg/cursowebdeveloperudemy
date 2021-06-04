@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -13,20 +14,25 @@
         <h3>Exercícios JS</h3>
     </header>
     <nav>
-        <a href="./teste.html">Aula 01 - JS</a>
+        <a href="./teste.html">Aula 01 - JS</a><br>
+        <a href="./teste2.html">Aula 02 - JS</a>
     </nav>
-    <section>
-        <h4 id="conteudo"></h4>
-    </section>
-    <footer>Curso de Web Developer - Udemy</footer>
+    <section id="conteudo"></section>
+    <footer id="rodape">Curso de Web Developer - Udemy</footer>
+    <!--
+        Este script pega o evento onclick do href (através do querySelectorAll)
+        e joga dentro de um elemento o valor obtido do arquivo localizado pelo caminho
+        sem precisar atualizar a página (através de uma requisição Ajax)
+    -->
     <script>
         document.querySelectorAll('a').forEach(link => {
-            const conteudo = document.getElementById("conteudo").innerHTML
+            const conteudo = document.getElementById('conteudo')
+
             link.onclick = function (e) {
                 e.preventDefault()
                 fetch(link.href)
                     .then(resultado => resultado.text())
-                    .then(html => conteudo.innerHTML = html)
+                    .then(html => conteudo.innerHTML = '<h5>Conteúdo da aula:</h5>' + html)
             }
         })
     </script>
