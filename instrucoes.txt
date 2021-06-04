@@ -1,5 +1,8 @@
-PLUGIN VISUAL CODE/NODE CONSOLE
-Runner
+PLUGINS INTERESSANTES VISUAL CODE
+- Code Runner
+- Live Server (simula uma servidor web)
+- Preview (pré-visualização da página)
+- Watch in chrome (pré-visualização no chrome)
 
 
 SITES PARA TESTAR CÓDIGO ONLINE

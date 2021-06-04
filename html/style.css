@@ -3,8 +3,10 @@ body{
     background-color: burlywood;
 }
 
-h3{
+#titulo{
     padding: 8px;
+    background-color: brown;
+    color: white;
 }
 
 a{
@@ -15,6 +17,8 @@ a{
 #rodape{
     margin-top: 20px;
     padding: 8px;
+    font-size: small;
+    font-style: italic;
 }
 
 h5{
