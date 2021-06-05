@@ -1,0 +1,121 @@
+<H4>Estrutura TI</H4>
+<ul class="tree">
+    <li>
+        <span elemento>Segmento</span>
+        <ul style="display: none;">
+            <li>
+                <span elemento>Desenvolvimento</span>
+                <ul style="display: none;">
+                    <li>
+                        <span elemento>Linguagem</span>
+                        <ul style="display: none;">
+                            <li>Java</li>
+                            <li>C#</li>
+                            <li>Node Js</li>
+                            <li>PHP</li>
+                            <li>Pyton</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span elemento>Infraestrutura</span>
+                <ul style="display: none;">
+                    <li>
+                        <span elemento>Redes</span>
+                        <ul style="display: none;">
+                            <li>Cabeamento</li>
+                            <li>Configuração</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span elemento>Faculdades</span>
+        <ul style="display: none;">
+            <li>
+                <span elemento>Anhembi Morumbi</span>
+                <ul style="display: none;">
+                    <li>Análise e Desenvolvimento de Sistemas</li>
+                    <li>Ciência da Computação</li>
+                    <li>Segurança da Informação</li>
+                    <li>Redes de Computadores</li>
+                    <li>Gestão da Tecnologia da Informação</li>
+                </ul>
+            </li>
+            <li>
+                <span elemento>Universidade Paulista</span>
+                <ul style="display: none;">
+                    <li>Ciências da Computação</li>
+                    <li>Gestão da Tecnologia da Informação</li>
+                    <li>Análise e Desenvolvimento de Sistemas</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[elemento]').forEach(elemento => {
+        elemento.onclick = function (e) {
+            const ul = elemento.nextElementSibling
+            const mostrar = ul.style.display
+            ul.style.display = mostrar == 'none' ? 'block' : 'none'
+        }
+    })
+</script>
+
+<!--<script>
+    function mostrarLinguagens() {
+        let show = document.getElementById('img')
+        if (show.style.display == 'none') {
+            show.style.display = 'block'
+        }
+        else {
+            show.style.display = 'none'
+        }
+    }
+
+    function mostrarRedes() {
+        let show = document.getElementById('img2')
+        if (show.style.display == 'none') {
+            show.style.display = 'block'
+        }
+        else {
+            show.style.display = 'none'
+        }
+    }
+
+    function mostrarSuporte() {
+        let show = document.getElementById('img3')
+        if (show.style.display == 'none') {
+            show.style.display = 'block'
+        }
+        else {
+            show.style.display = 'none'
+        }
+    }
+
+    function mostrarAnhembi() {
+        let show = document.getElementById('img4')
+        if (show.style.display == 'none') {
+            show.style.display = 'block'
+        }
+        else {
+            show.style.display = 'none'
+        }
+    }
+    function mostrarUnip() {
+        let show = document.getElementById('img5')
+        if (show.style.display == 'none') {
+            show.style.display = 'block'
+        }
+        else {
+            show.style.display = 'none'
+        }
+    }
+</script>-->
