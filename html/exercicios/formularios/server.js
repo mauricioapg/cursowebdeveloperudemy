@@ -10,7 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true}))
 //POST
 app.post('/usuarios', (req, res) => {
     console.log(req.body)
-    res.send('<h3>Parabéns!</h3>') //JSON
+    res.send('<h3>Parabéns!</h3><br>Usuário adicionado!') //JSON
+})
+
+//POST
+app.post('/usuarios/:id', (req, res) => {
+    console.log(req.params.id)
+    console.log(req.body)
+    res.send('<h3>Parabéns!</h3><br>Usuário alterado!') //JSON
 })
 
 //LIGAR O SERVIDOR
