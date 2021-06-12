@@ -6,7 +6,23 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .big{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .flex-container div{
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            flex-flow:column-reverse wrap
+        }
     </style>
 </head>
 
