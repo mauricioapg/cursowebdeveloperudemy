@@ -10,7 +10,20 @@
             padding: 20px;
             background-color: coral;
             border: solid 5px;
-            display: none;
+            display: block;
+        }
+
+        /* A media query se aplica conforme a condição de pixels for verdadeira */
+        @media (max-width: 600px){
+            .muito-pequeno {display: block;}
+        }
+
+        @media (max-width: 1000px), (orientation: portrait){
+            .pequeno-retrato {display: block;}
+        }
+
+        @media (min-width: 600px) and (max-width: 1000px){
+            .intervalo {display: block;}
         }
     </style>
 </head>
