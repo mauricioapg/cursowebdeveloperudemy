@@ -9,7 +9,41 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div')
+        div1.innerHTML = 'Primeira DIV'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('atributo', 'valor')
+        div2.innerHTML = 'Segunda Div'
+
+        const ul = document.createElement('ul')
+
+        const li1 = document.createElement('li')
+        li1.innerHTML = 'item 1'
+
+        const li2 = document.createElement('li')
+        li2.innerHTML = 'item 2'
+
+        const li3 = document.createElement('li')
+        li3.innerHTML = 'item 3'
+
+        ul.appendChild(li1) /* adicionando elemento */
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(ul)
+
+        const ul2 = ul.cloneNode(true) /* clonando elementos */
+
+        body.appendChild(ul2)
+
+        const antes = document.createTextNode('Antes...') /* inseriu texto antes do 1º elemento da div */
+        div2.insertBefore(texto, div2.childNodes[0])
+
     </script>
 </body>
 

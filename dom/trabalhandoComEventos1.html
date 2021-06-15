@@ -9,9 +9,22 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navegarEm5(event)" FORMA DE MANIPULAR EVENTOS -->
+        <a esperar-um-pouco href="https://google.com.br">Google</a>
+        <span id='msg'></span>
     </div>
     <script>
-        // ...
+        function navegarEm5(e){
+            e.preventDefault()
+            document.getElementById('msg').innerHTML = 'Saindo em 5 segundos...'
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        /* FORMA DE MANIPULAR EVENTOS */
+        const irPara = document.querySelector('[esperar-um-pouco]')
+        irPara.onclick = navegarEm5
     </script>
 </body>

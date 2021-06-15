@@ -17,7 +17,26 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('ul')
+        console.log('getAttribute', lista.childNodes) /* nós filhos deste elemento */
+        console.log('getAttribute', lista.nextSibling) /* próximo elemento depois deste */
+        console.log('hasAttribute', lista.hasAttribute('destino')) /* verifica se existe um elemento */
+
+        const div = document.querySelector('div')
+        console.log('getAttribute', div.childNodes)        
+        
+        function verificador(elemento){
+            const ul = document.querySelector(elemento)
+            if('hasAttribute', ul.hasAttribute('destino')){
+                console.log('Encontrado')
+            }
+            else{
+                console.log('Não encontrado')
+            }
+        }
+
+        verificador('ul')
+        
     </script>
 </body>
 

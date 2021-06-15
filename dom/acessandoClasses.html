@@ -12,7 +12,16 @@
         Classes
     </div>
     <script>
-        // ...
+        const classesDiv = document.querySelector('div').classList
+
+        classesDiv.add('destaque') /* adiciona uma classe */
+        classesDiv.remove('destaque') /* remove uma classe */
+        classesDiv.toggle('destaque') /* inverte a visibilidade (true/false) */
+        console.log(classesDiv.length)
+
+        for(let i in classesDiv){
+            console.log(i)
+        }
     </script>
 </body>
 
