@@ -30,7 +30,28 @@
             </select>
         <button wm-submit>Pesquisar</button>
     </form>
+    <div>
+        <h6 id="resultado"></h6>
+    </div>
     <script>
-        // ...
+        const form = document.forms[0]
+        form.onsubmit = function (e){
+            e.preventDefault() /* interceptar o evento */
+
+            const form = e.target
+            const formData = new FormData(form)
+            formData.append('ajax', true)
+            console.log(formData.get('q'))
+            console.log(formData.has('hl'))
+
+            const labelResultado = document.getElementById('resultado')
+            labelResultado.innerHTML = `
+            ${formData.get('q')}
+            ${formData.has('hl')}`
+
+            for(let dado of formData){
+                console.log(dado)
+            }
+        }
     </script>
 </body>

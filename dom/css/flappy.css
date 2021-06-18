@@ -1,0 +1,14 @@
+.flex-container{
+    width: 10%;
+}
+
+.barreira{
+    background-color: green;
+    height: 200px;
+}
+
+.barreira2{
+    background-color: green;
+    
+    margin-top: 1000px;
+}
