@@ -14,6 +14,26 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function exibirResultado(id, dados){
+            const texto = JSON.stringify(dados)
+            document.getElementById(id).innerHTML = texto
+        }
+
+        //Forma usando query. Ex: www.urlsite.com.br?parametro=8
+        /* axios('parOuImpar?numero=5').then(resp => exibirResultado('get', resp.data)) */
+
+
+        //Forma usando params
+        axios.get('parOuImpar', {
+            params: {
+                numero: 6
+            }
+        }).then(resp => exibirResultado('get', resp.data))
+
+        axios.post('formulario', {
+            nome: 'Mauricio',
+            sobrenome: 'Gabriel'
+        }).then(resp => exibirResultado('post', resp.data))
+
     </script>
 </body>
