@@ -1,9 +1,36 @@
 const gulp = require('gulp')
 const series = gulp.series
+const parallel = gulp.parallel
 
-function copiar(cb){
-    console.log('Aqui executa a tarefa de copiar...')
+const antes1 = cb => {
+    console.log('Tarefa Antes 1...')
     return cb()
 }
 
-module.exports.default = series(copiar)
+const antes2 = cb => {
+    console.log('Tarefa Antes 2...')
+    return cb()
+}
+
+function copiar(cb) {    
+    //1ª forma
+    gulp.src('pastaA/**/*.txt') //copia somente arquivos com a extensão txt
+    .pipe(gulp.dest('pastaB'))
+
+    //2ª forma
+    /* gulp.src(['pastaA/arquivo1.txt', 'pastaA/arquivo2.txt'])
+        .pipe(gulp.dest('pastaB')) */
+    return cb()
+}
+
+const depois = cb => {
+    console.log('Tarefa Depois...')
+    return cb()
+}
+
+//Executando em série
+module.exports.default = series(
+    parallel(antes1, antes2), //Executando em paralelo
+    copiar,
+    depois,
+)
