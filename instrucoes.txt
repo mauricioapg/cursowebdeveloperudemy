@@ -11,3 +11,6 @@ https://replit.com/
 
 JSFiddle
 https://jsfiddle.net/
+
+Regex101 (testa expressões regex)
+https://regex101.com/
