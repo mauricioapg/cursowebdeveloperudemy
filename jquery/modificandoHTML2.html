@@ -17,6 +17,23 @@
     <p class='numero'>5</p>
 
     <script>
-        // ...
+        $('#div1').append(', 2') //append adiciona depois
+        $('#div1').prepend('0, ') //prepend adiciona antes
+
+        $('<span> anos</span>').appendTo('#div2')
+        $('<span>Idade: </span>').prependTo('#div2')
+
+        $('#div2').before('Item:')
+        $("#div2").after('Número')
+
+        $('<h3>Próximo:</h3>').insertBefore('#div3')
+        $('<h3>Parágrafo:</h3>').insertAfter('#div3')
+
+        $('p.numero').wrap('<div>') //envolve cada elemento com a classe número dentro de uma div
+        $('p.numero').wrapAll('<div id="div4">') //envolve os elementos com a classe em uma única div
+        
+        $('#div4').empty()
+
+        $('body > #div3').replaceWith('<span>Substituto</span>')
     </script>
 </body>

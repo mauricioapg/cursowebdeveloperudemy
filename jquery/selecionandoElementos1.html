@@ -49,6 +49,22 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque') //seletor ID
+        $('li').addClass('destaque') //seletor elemento
+        $('div p span').addClass('destaque') //seletor elementos encadeados
+        $('.opcional').removeClass('destaque') //seletor classe
+        $('[wm-obrigatorio]').removeClass('destaque') //seletor atributo
+
+        //Exclusivos do jQuery
+        $('li:first').css('background-color', 'red') //prineiro elemento li
+        $('li:odd').css('color', 'pink') //li ímpar
+        $('li:contains("F")').css('background-color', 'darkblue') //contém letra F
+
+        $('form *').hide() //esconde todos os elementos de formulário   
+        $('form :text').show() //aparece inputs do tipo texto  
+        $('form :password').show() //aparece inputs do tipo password
+        $('form :radio').show() //aparece inputs do tipo radio
+        $('form :file').show() //aparece inputs do tipo arquivo 
+        $('form :checkbox').show() //aparece inputs do tipo checkbox  
     </script>
 </body>

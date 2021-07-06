@@ -81,6 +81,13 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        //jQuery tbm interpreta objetos dentro do CSS
+        const comBorda = {'border': 'solid 8px blue'}
+        const semBorda = {'border': 'none'}
+        const fundoLaranja = {'background-color': 'orange'}
+
+        $('a[href="#link2').parent().css(comBorda).css(fundoLaranja)
+        const elementoDOM = document.getElementsByClassName('conteudo-principal')
+        $(elementoDOM).css('color', 'green') //seletor elementos DOM
     </script>
 </body>

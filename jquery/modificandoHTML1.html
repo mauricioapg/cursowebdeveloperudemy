@@ -15,6 +15,23 @@
     <div id='conteudo3'></div>
 
     <script>
-        // ...
+
+        //Conteúdo 1
+        const time = $('<h2>').append('Sociedade Esportiva Palmeiras')        
+        $('#conteudo1').append(time)
+
+
+        //Conteúdo 2
+        const elementos = [
+            $('<li>').append('Mauricio'),
+            $('<li>').append('João'),
+            $('<li>').append('Laura')
+        ]
+
+        const lista = $('<ul>').append(elementos)
+        $('#conteudo2').append(lista)
+
+        //Conteúdo 3
+        $('#conteudo3').append('<p>Programação é arte</p>')
     </script>
 </body>

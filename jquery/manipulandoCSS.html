@@ -15,6 +15,12 @@
     <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
-        // ...
+        $('#div1').css('background-color', 'green') //mudando atributo CSS
+        $('#div2').css({'color': 'yellow', 'font-size': '80px'}) //mudando vários atributos CSS
+        const fonteAtual = $('#div1').css('font-family') //pegando fonte CSS atual
+        $('#resultado').append(fonteAtual)
+        $('#div3').css('font-size', function(){ //usa uma função para manipular o CSS
+            return 2 * 2 + 'em'
+        })
     </script>
 </body>
