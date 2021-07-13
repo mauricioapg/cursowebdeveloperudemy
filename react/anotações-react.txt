@@ -1,0 +1,3 @@
+CRIAR APLICAÇÃO REACT
+npm i -g create-react-app
+create-react-app "nomedoprojeto"
