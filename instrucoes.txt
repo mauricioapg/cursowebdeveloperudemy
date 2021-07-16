@@ -14,3 +14,8 @@ https://jsfiddle.net/
 
 Regex101 (testa expressões regex)
 https://regex101.com/
+
+
+SITE PARA OBTER GRADIENTES (CORES)
+
+https://uigradients.com/#Sunrise
