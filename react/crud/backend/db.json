@@ -1,0 +1,14 @@
+{
+    "users": [{
+        "id": 1,
+        "nome": "Mauricio Aparecido Gabriel Dias",
+        "idade": "29",
+        "profissao": "Desenvolvedor"
+    },
+    {
+        "id": 2,
+        "nome": "Lindsay Campelo Dias Rodrigues",
+        "idade": "25",
+        "profissao": "Instrumentadora Cirúrgica"
+    }]
+}
