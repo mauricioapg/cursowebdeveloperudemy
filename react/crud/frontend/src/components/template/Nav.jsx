@@ -6,8 +6,8 @@ export default props =>
     <aside className="menu-area">
         <nav className="menu">
             <React.Fragment>
-                <NavItem {...props}/>
-                <NavItem {...props} title="Usuários" destino="#/users"/>
+                <NavItem {...props} />
+                <NavItem {...props} title="Usuários" destino="/users"/>
             </React.Fragment>
         </nav>
     </aside>

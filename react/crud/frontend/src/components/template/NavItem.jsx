@@ -1,7 +1,8 @@
 import React from 'react'
 import './NavItem.css'
+import { Link } from 'react-router-dom'
 
 export default props =>
-    <a href={props.destino}>
+    <Link to={props.destino}>
         <i>{props.title}</i>
-    </a>
+    </Link>

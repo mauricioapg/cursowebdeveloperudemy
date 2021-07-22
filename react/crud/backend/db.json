@@ -1,14 +1,24 @@
 {
-    "users": [{
-        "id": 1,
-        "nome": "Mauricio Aparecido Gabriel Dias",
-        "idade": "29",
-        "profissao": "Desenvolvedor"
+  "users": [
+    {
+      "id": 1,
+      "name": "Mauricio Aparecido Gabriel Dias",
+      "occupation": "Desenvolvedor"
     },
     {
-        "id": 2,
-        "nome": "Lindsay Campelo Dias Rodrigues",
-        "idade": "25",
-        "profissao": "Instrumentadora Cirúrgica"
-    }]
+      "id": 2,
+      "name": "Lindsay Campelo Dias Rodrigues",
+      "occupation": "Instrumentadora Cirúrgica"
+    },
+    {
+      "name": "José da Silva",
+      "occupation": "Metalúrgico",
+      "id": 3
+    },
+    {
+      "name": "Maria das Dores",
+      "occupation": "Gerente Administrativa",
+      "id": 4
+    }
+  ]
 }
