@@ -22,6 +22,12 @@ export default class UserCrud extends Component {
 
     state = { ...initialState }
 
+    componentDidMount() {
+        axios(baseUrl).then(resp => {
+            this.setState({ list: resp.data })
+        })
+    }
+
     clear() {
         this.setState({ user: initialState.user })   /* limpa o usuário para o estado inicial */
     }
@@ -37,9 +43,9 @@ export default class UserCrud extends Component {
             })
     }
 
-    getUpdatedList(user) {
+    getUpdatedList(user, add = true) {
         const list = this.state.list.filter(u => u.id !== user.id)
-        list.unshift(user)
+        if (add) list.unshift(user)
         return list
     }
 
@@ -47,6 +53,59 @@ export default class UserCrud extends Component {
         const user = { ...this.state.user }
         user[event.target.name] = event.target.value
         this.setState({ user })
+    }
+
+    load(user) {
+        this.setState({ user })
+    }
+
+    remove(user) {
+        axios.delete(`${baseUrl}/${user.id}`).then(resp => {
+            const list = this.getUpdatedList(user, false)
+            this.setState({ list })
+        })
+    }
+
+    renderTable() {
+        return (
+            <table className="table mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Profissão</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.renderRows()}
+                </tbody>
+            </table>
+        )
+    }
+
+    renderRows() {
+        return this.state.list.map(user => {
+            return (
+                <tr key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.name}</td>
+                    <td>{user.occupation}</td>
+                    <td>
+                        <button className="btn btn-warning"
+                            onClick={() => this.load(user)}>
+                            <i className="fa fa-pencil"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button className="btn btn-danger ml-2"
+                            onClick={() => this.remove(user)}>
+                            <i className="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            )
+        })
     }
 
     renderForm() {
@@ -78,11 +137,11 @@ export default class UserCrud extends Component {
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end">
                         <button className="btn btn-primary"
-                        onClick={e => this.save(e)}>
+                            onClick={e => this.save(e)}>
                             Salvar
                         </button>
                         <button className="btn btn-secondary ml-2"
-                        onClick={e => this.clear(e)}>
+                            onClick={e => this.clear(e)}>
                             Cancelar
                         </button>
                     </div>
@@ -95,6 +154,7 @@ export default class UserCrud extends Component {
         return (
             <Main {...headerProps}>
                 {this.renderForm()}
+                {this.renderTable()}
             </Main>
         )
     }
