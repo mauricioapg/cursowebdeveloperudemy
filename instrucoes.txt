@@ -3,6 +3,7 @@ PLUGINS INTERESSANTES VISUAL CODE
 - Live Server (simula uma servidor web)
 - Preview (pré-visualização da página)
 - Watch in chrome (pré-visualização no chrome)
+- Material Icons
 
 
 SITES PARA TESTAR CÓDIGO ONLINE
@@ -19,3 +20,7 @@ https://regex101.com/
 SITE PARA OBTER GRADIENTES (CORES)
 
 https://uigradients.com/#Sunrise
+
+
+RODAR O MONGO DB NO MAC:
+sudo mongod --dbpath ~/data/db
