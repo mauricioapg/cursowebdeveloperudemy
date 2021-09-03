@@ -1,0 +1,20 @@
+body{
+    color: brown;
+    background-color: beige;
+}
+
+ul{
+    list-style: none;
+    display: inline;
+}
+
+li{
+    padding: 10px;
+}
+
+li a:hover{
+    border-radius: 10px;
+    padding: 6px;
+    background-color: blue;
+    color: white;
+}
