@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015", //alterei pra versão mais recente para suportar # como atributos privados
     "lib": [
       "dom",
       "dom.iterable",
