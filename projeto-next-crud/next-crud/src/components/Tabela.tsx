@@ -1,5 +1,5 @@
 import Cliente from '../core/Cliente'
-import BotaoAcoes from './BotaoAcoes'
+import BotaoAcoes from './Botao'
 import { IconeEdicao, IconeLixeira } from './Icones'
 
 interface TabelaProps {
@@ -43,7 +43,7 @@ export default function Tabela(props: TabelaProps) {
         return (
             <td className="flex justify-center">
                 {props.clienteSelecionado ?
-                    <BotaoAcoes estilo={`
+                    <BotaoAcoes className={`
                 flex justify-center items-center
                 text-green-600 rounded-full p-2 m-1
                 hover:bg-purple-50
@@ -53,7 +53,7 @@ export default function Tabela(props: TabelaProps) {
                     </BotaoAcoes>
                     : false}
                 {props.clienteExcluido ?
-                    <BotaoAcoes estilo={`
+                    <BotaoAcoes className={`
                 flex justify-center items-center
                 text-red-600 rounded-full p-2 m-1
                 hover:bg-purple-50
