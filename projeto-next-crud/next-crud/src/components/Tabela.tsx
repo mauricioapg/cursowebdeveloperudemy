@@ -48,7 +48,7 @@ export default function Tabela(props: TabelaProps) {
                 text-green-600 rounded-full p-2 m-1
                 hover:bg-purple-50
                 `}
-                        acao={() => props.clienteSelecionado(cliente)}>
+                        onClick={() => props.clienteSelecionado(cliente)}>
                         {IconeEdicao}
                     </BotaoAcoes>
                     : false}
@@ -58,7 +58,7 @@ export default function Tabela(props: TabelaProps) {
                 text-red-600 rounded-full p-2 m-1
                 hover:bg-purple-50
                 `}
-                        acao={() => props.clienteExcluido(cliente)}>
+                        onClick={() => props.clienteExcluido(cliente)}>
                         {IconeEdicao}
                     </BotaoAcoes>
                     : false}

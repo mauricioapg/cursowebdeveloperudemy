@@ -1,13 +1,13 @@
 interface BotaoAcoesProps{
     children: any,
-    acao: any,
+    onClick: any,
     className: String
 }
 
 export default function BotaoAcoes(props: BotaoAcoesProps){
     return(
         <button className={`${props.className}`}
-        onClick={props.acao}>
+        onClick={props.onClick}>
             {props.children}
         </button>
     )
