@@ -59,7 +59,7 @@ export default function Tabela(props: TabelaProps) {
                 hover:bg-purple-50
                 `}
                         onClick={() => props.clienteExcluido(cliente)}>
-                        {IconeEdicao}
+                        {IconeLixeira}
                     </BotaoAcoes>
                     : false}
             </td>
