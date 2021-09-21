@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+<div id="app">
+    <p>{{ link }}</p>
+    <p><a href="{{ link }}">Clique Aqui</a></p>
+    <p><a v-bind:href="link">Link com diretiva v-bind</a></p>
+    <p><a :href="link">Link com diretiva v-bind (reduzido)</a></p>
+    <p>
+        <h6>Diretiva v-model (bind bi-direcional):</h6>
+        <input type="text" v-model="nome">
+        <h5>{{ nome }}</h5>
+        <p id="#novoValor"></p>
+    </p>
+</div>
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                nome: "Mauricio",
+                link: "http://mauriciogabrieldias.com.br"
+            },
+            watch:{ //função chamado quando o valor é alterado
+                nome(novoValor){
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
+    </script>
+</body>
+</html>

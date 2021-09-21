@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conceitos Básicos</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>1) {{ 2 + 2 }}</p>
+        <p>2) {{ nome.toUpperCase() }}</p>
+        <p>3) {{ horario() }}</p>
+        <p>4) {{ calcularMedia }}</p>
+    </div>
+
+    <script>
+        new Vue({  //vue instance
+            el: "#app", //seletor do elemento
+            data:{
+                nome: 'Mauricio',
+                idade: 29,
+                nota1: 8,
+                nota2: 7.5,
+                nota3: 7
+            },
+            methods:{
+                horario(){
+                    return new Date().toLocaleDateString()
+                }
+            },
+            computed:{
+                calcularMedia(){
+                    return `Média = ${(this.nota1 + this.nota2 + this.nota3) / 3}`
+                }
+            }
+        })
+    </script>
+</body>
+</html>
